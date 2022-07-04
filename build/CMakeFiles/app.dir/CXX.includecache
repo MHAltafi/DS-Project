@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Graph.h
+iostream
+-
+vector
+-
+
+/mnt/d/cpp/dsproject/src/Graph.cpp
+iostream
+-
+Graph.h
+/mnt/d/cpp/dsproject/src/Graph.h
+
+/mnt/d/cpp/dsproject/src/main.cpp
+iostream
+-
+Graph.h
+/mnt/d/cpp/dsproject/src/Graph.h
+
