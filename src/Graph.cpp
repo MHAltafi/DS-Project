@@ -19,6 +19,7 @@ void Graph::setnewedge(node starting, node ending, string nameofedge, float leng
     newedge.end = ending;
     newedge.weight = length*traffic;
     newedge.name = nameofedge;
+    newedge.length = length;
     adjmatrix[starting.tag][ending.tag] = newedge.weight;
     adjmatrix[ending.tag][starting.tag] = newedge.weight;
     newedge.tag = edgetag;
@@ -49,9 +50,7 @@ void Graph::createadjmatrix()
         {
             adjmatrix[i][j] = 0;
         }
-        
-    }
-    
+    }  
 }
 
 void Graph::printadj()
@@ -63,7 +62,6 @@ void Graph::printadj()
             cout << left << setw(8) << adjmatrix[i][j];
         }
         cout <<" " << endl;
-        
     }
 }
 
@@ -83,13 +81,24 @@ string Graph::getnodename(int nodetag)
     }
 }
 
-string Graph::getedgename(int edgetag)
+string Graph::getedgename(int start, int end)
 {
     for(auto i : edges)
     {
-        if(i.tag == edgetag)
+        if((i.start.tag == start && i.end.tag == end) || (i.start.tag == end && i.end.tag == start))
         {
             return i.name;
+        }
+    }
+}
+
+float Graph::getlength(int start, int end)
+{
+    for(auto i : edges)
+    {
+        if((i.start.tag == start && i.end.tag == end) || (i.start.tag == end && i.end.tag == start))
+        {
+            return i.length;
         }
     }
 }

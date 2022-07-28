@@ -17,6 +17,7 @@ struct edge
     float weight;
     string name;
     int tag;
+    float length;
 };
 
 class Graph
@@ -34,11 +35,8 @@ class Graph
         void printadj();
         float** getadj();
         string getnodename(int nodetag);
-        string getedgename(int edgetag);
+        string getedgename(int start, int end);
+        float getlength(int start, int end);
 };
-
-
-
-
 
 #endif
