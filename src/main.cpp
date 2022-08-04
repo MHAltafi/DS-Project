@@ -65,7 +65,7 @@ void printpathtoshandiz(float shortestdistance[], float parentnode[], Graph a) /
 {
     cout << "The minimum cost for a path between Shandiz Haji Restaurant and Ghadir Dormitory considering the traffic is : " << shortestdistance[15] << endl;
     cout << "The length for this path is : " << printlength(parentnode, 15, a) << endl;
-    cout << "Due to the traffic, your Path should be from these Squares/Intersections:" << endl;
+    cout << "Due to the traffic, your path should be from these Squares/Intersections:" << endl;
     printpathnodes(parentnode, 15, a);
     cout << endl;
     cout << "Due to the traffic, your path should be from these Streets:" << endl;
@@ -130,7 +130,7 @@ int main()
     a.setnewedge(a.getnode("Imam Square"),a.getnode("Takhti Bridge"),"Takhti St",0.2,2,5);
     a.setnewedge(a.getnode("Imam Square"),a.getnode("Imamzadeh Abdollah Square"),"Babataher St",1.9,2,6);
     a.setnewedge(a.getnode("Imamzadeh Abdollah Square"),a.getnode("Shariati 4-way"),"Ayatolah Kashani Blvd",2,1,7);
-    a.setnewedge(a.getnode("Imam Square"),a.getnode("Shariati 4-way"),"Ayatolah Kashani Blvd",2.1,3,8);
+    a.setnewedge(a.getnode("Imam Square"),a.getnode("Shariati 4-way"),"Shariati St from Imam Sq to Bridge",2.1,3,8);
     a.setnewedge(a.getnode("Takhti Bridge"),a.getnode("Buali Sina Square"),"Madani Blvd",2.4,2,9);
     a.setnewedge(a.getnode("Shariati 4-way"),a.getnode("Buali Sina Square"),"Khajeh Rashid Blvd",1.9,2,10);
     a.setnewedge(a.getnode("Shariati 4-way"),a.getnode("Shariati Square"),"Shariati St",0.1,3,11);
